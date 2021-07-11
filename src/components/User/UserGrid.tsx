@@ -1,4 +1,4 @@
-import { Query } from 'react-apollo'
+import { useQuery } from '@apollo/client'
 import {
   createStyles,
   StyledComponentProps,
@@ -40,42 +40,37 @@ type Props = StyledComponentProps & {
 
 const UserGrid = (props: Props) => {
   const { classes } = props
+  const { loading, error, data } = useQuery(GET_USERS, {
+    variables: {
+      role: props.userRole,
+      searchName: props.searchName,
+    },
+    errorPolicy: 'all',
+  })
+
   return (
     <div className={classes?.root}>
-      <Query
-        query={GET_USERS}
-        variables={{
-          role: props.userRole,
-          searchName: props.searchName,
-        }}
-        errorPolicy="all"
-      >
-        {(res: any) => {
-          const { data, error, loading } = res
-          return loading ? (
-            <p className={classes?.genericText}>Loading...</p>
-          ) : error ? (
-            <p className={classes?.genericText}>Error! {error.message}</p>
+      {loading ? (
+        <p className={classes?.genericText}>Loading...</p>
+      ) : error ? (
+        <p className={classes?.genericText}>Error! {error.message}</p>
+      ) : (
+        <div className={classes?.userList}>
+          {data.users.length === 0 ? (
+            <p className={classes?.genericText}>No users found</p>
           ) : (
-            <div className={classes?.userList}>
-              {/* Filter if user name is "" or null */}
-              {data.users.length === 0 ? (
-                <p className={classes?.genericText}>No users found</p>
-              ) : (
-                data.users.map((user: any) => {
-                  return (
-                    <User
-                      userName={user.name}
-                      canCreate={user.permissions.createUser}
-                      key={`${user?.id}${user?.name}${user?.createdAt}`}
-                    />
-                  )
-                })
-              )}
-            </div>
-          )
-        }}
-      </Query>
+            data.users.map((user: any) => {
+              return (
+                <User
+                  userName={user.name}
+                  canCreate={user.permissions.createUser}
+                  key={`${user?.id}${user?.name}${user?.createdAt}`}
+                />
+              )
+            })
+          )}
+        </div>
+      )}
     </div>
   )
 }

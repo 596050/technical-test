@@ -1,16 +1,14 @@
 import ReactDOM from 'react-dom'
-import ApolloClient from 'apollo-boost'
-import { ApolloProvider } from 'react-apollo'
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
 
 import reportWebVitals from './reportWebVitals'
 import ErrorBoundary from './components/HOC/ErrorBoundary/ErrorBoundary'
-import './index.css'
 import App from './App'
-
-console.log(process.env.REACT_APP_SERVER_URL)
+import './index.css'
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000',
+  cache: new InMemoryCache(),
 })
 
 ReactDOM.render(
