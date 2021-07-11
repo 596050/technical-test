@@ -1,0 +1,170 @@
+[
+  {
+    "id": "0",
+    "departmentId": ["1"],
+    "name": "Peter Falkirk",
+    "role": ["ADMIN"],
+    "createdAt": "Fri Jan 18 2019 13:10:20 GMT+0000 (Greenwich Mean Time)",
+    "permissions": {
+      "content": [
+        {
+          "departmentId": ["1", "2", "3"],
+          "get": true,
+          "create": true,
+          "update": true,
+          "delete": true
+        }
+      ],
+      "user": [
+        {
+          "departmentId": ["1", "2", "3"],
+          "get": true,
+          "create": true,
+          "update": true,
+          "delete": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "1",
+    "departmentId": ["2", "3"],
+    "name": "Mary Gardy",
+    "role": ["MARKETING", "RECRUITMENT"],
+    "createdAt": "Fri Jan 18 2018 09:10:20 GMT+0000 (Greenwich Mean Time)",
+    "permissions": {
+      "content": [
+        {
+          "departmentId": ["2", "3"],
+          "get": true,
+          "create": true,
+          "update": true,
+          "delete": true
+        }
+      ],
+      "user": [
+        {
+          "departmentId": ["2", "3"],
+          "get": true,
+          "create": true,
+          "update": true,
+          "delete": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "2",
+    "departmentId": ["2"],
+    "name": "Tomas Guggen",
+    "role": ["MARKETING"],
+    "createdAt": "Fri Jan 18 2018 09:10:20 GMT+0000 (Greenwich Mean Time)",
+    "permissions": {
+      "content": [
+        {
+          "departmentId": ["2"],
+          "get": true,
+          "create": true,
+          "update": true,
+          "delete": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "3",
+    "departmentId": ["3"],
+    "name": "Superhands Fredrick",
+    "role": ["RECRUITMENT"],
+    "createdAt": "",
+    "permissions": {
+      "content": [
+        {
+          "departmentId": ["2"],
+          "get": true,
+          "create": true,
+          "update": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "4",
+    "departmentId": ["2"],
+    "name": "Peter Stifler",
+    "role": ["MARKETING"],
+    "createdAt": "Fri Jan 18 2018 09:10:20 GMT+0000 (Greenwich Mean Time)",
+    "permissions": {
+      "content": [
+        {
+          "departmentId": ["2"],
+          "get": true,
+          "create": true,
+          "update": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "5",
+    "departmentId": ["2"],
+    "name": "Anne Welder",
+    "role": ["MARKETING"],
+    "createdAt": "Fri Jan 18 2018 09:10:20 GMT+0000 (Greenwich Mean Time)",
+    "permissions": {
+      "content": [
+        {
+          "departmentId": ["2"],
+          "get": true,
+          "create": true,
+          "update": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "6",
+    "departmentId": ["2"],
+    "name": "",
+    "role": ["MARKETING"],
+    "createdAt": "Fri Jan 18 2018 09:10:20 GMT+0000 (Greenwich Mean Time)",
+    "permissions": {
+      "content": [
+        {
+          "departmentId": ["2"],
+          "get": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "7",
+    "departmentId": ["2"],
+    "name": "Mourinho",
+    "role": ["MARKETING"],
+    "createdAt": "Fri Jan 18 2018 09:10:20 GMT+0000 (Greenwich Mean Time)",
+    "permissions": {
+      "content": [
+        {
+          "departmentId": ["2"],
+          "get": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "8",
+    "departmentId": ["2"],
+    "name": "Peteris Best",
+    "role": ["MARKETING"],
+    "createdAt": "Fri Jan 18 2018 09:10:20 GMT+0000 (Greenwich Mean Time)",
+    "permissions": {
+      "content": [
+        {
+          "departmentId": ["2"],
+          "get": true
+        }
+      ]
+    }
+  }
+]

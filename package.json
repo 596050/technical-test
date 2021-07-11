@@ -1,0 +1,59 @@
+{
+  "name": "prideinlondon_technical_test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "nodemon server.js",
+    "test:watch": "yarn jest --watch"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.x",
+    "@testing-library/jest-dom": "^5.x",
+    "@testing-library/react": "^11.x",
+    "@testing-library/user-event": "^12.x",
+    "apollo-boost": "^0.x",
+    "apollo-server": "^2.x",
+    "graphql": "^15.x",
+    "lodash": "^4.x",
+    "nodemon": "^2.x",
+    "react": "^17.x",
+    "react-apollo": "^3.1.5",
+    "react-dom": "^17.x",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.x",
+    "styled-components": "^5.x",
+    "typescript": "^4.x",
+    "web-vitals": "^1.x"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.x",
+    "@types/node": "^12.x",
+    "@types/react": "^17.x",
+    "@types/react-dom": "^17.x",
+    "@types/react-router-dom": "^5.1.8",
+    "@types/styled-components": "^5.x",
+    "prettier": "^2.x"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
