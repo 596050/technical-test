@@ -1,6 +1,5 @@
-const USERS = require('./server/USERS.json')
+const USERS = require('./USERS.json')
 const { ApolloServer } = require('apollo-server')
-const _ = require('lodash')
 
 const nestedSort = (p) => (e1, e2) => {
   const a = e1[p],
@@ -27,7 +26,7 @@ const filterUsers = (role, searchName) => {
 }
 
 const typeDefs = `
-type Query {
+  type Query {
     users(role: String, searchName: String): [User]
     hasPermission(userId: String, permissions: [HasPermissions]): [User]
   }
@@ -36,8 +35,8 @@ type Query {
     departmentId: String
     permissionsType: String
   }
-
-	type User {
+  
+  type User {
     id: String!
     name: String!
     role: [Role]!
@@ -90,7 +89,6 @@ const resolvers = {
               }) > -1
             )
           })
-          console.log('users', users)
           return users
         }
         return null
